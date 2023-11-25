@@ -1,2 +1,111 @@
 @import url("./reset.css");
-
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #e3f2fd;
+  text-transform: capitalize;
+  color: #dddddd;
+}
+.container {
+  padding: 2rem;
+  width: 98%;
+  max-width: 760px;
+  border: 2px solid #000;
+  border-radius: 2rem;
+  background: linear-gradient(#222, #000);
+}
+.container header {
+  color: #ffffff75;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header h2 {
+  font-size: 1.6rem;
+}
+header .column {
+  display: flex;
+  align-items: center;
+}
+.volume-slider {
+  accent-color: #4b4b4b;
+}
+header .column span {
+  font-weight: 800;
+  margin-right: 2rem;
+  font-size: 1.19rem;
+}
+.piano-keyboard {
+  color: black;
+}
+.keys-check input {
+  height: 2rem;
+  width: 3.5rem;
+  appearance: none;
+  border-radius: 30px;
+  background-color: #4b4b4b;
+  cursor: pointer;
+  position: relative;
+}
+.keys-check input::before{
+  content: "";
+  height: 70%;
+  aspect-ratio: 1/1;
+  background-color: #fff;
+  position: absolute;
+  border-radius: inherit;
+  top: 50%;
+  left: 0.35rem;
+  transform: translateY(-50%);
+  transition: all 0.35s ease;
+}
+.keys-check input:checked::before{
+  background-color: #00ff0050;
+  left: 1.7rem;
+}
+.piano-keyboard {
+  color: #fff;
+  display: flex;
+  margin: 2rem auto;
+}
+.piano-keyboard .key {
+  color: #a2a2a2;
+  user-select: none;
+  cursor: pointer;
+  list-style: none;
+  position: relative;
+}
+.piano-keyboard .white {
+  width: 70px;
+  z-index: 1;
+  height: 230px;
+  border: 1px solid #a2a2a2;
+  border-radius: 0 0 8px 8px;
+  background: linear-gradient(#fff 96%, #eee 4%);
+}
+.piano-keyboard .white:active {
+  box-shadow: inset 5px 5px 20px rgba(0,0,0,0.4);
+  background: linear-gradient(to bottom #fff 0%, #eee 100%);
+}
+.piano-keyboard .black {
+  width: 44px;
+  z-index: 2;
+  margin: 0 -22px 0 -22px;
+  height: 140px;
+  border: 1px solid #a2a2a2;
+  border-radius: 0 0 5px 5px;
+  background: linear-gradient(#333, #111);
+}
+.piano-keyboard .black:active {
+  box-shadow: inset 5px 5px 20px rgba(0,0,0,0.9);
+  background: linear-gradient(to bottom #fff 0%, #eee 100%);
+}
+.piano-keyboard span {
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+  text-align: center;
+  font-size: 1.15rem;
+}
