@@ -84,6 +84,7 @@ header .column span {
 }
 .piano-keyboard .white {
   width: 70px;
+  user-select: none;
   z-index: 1;
   height: 230px;
   border: 1px solid #a2a2a2;
@@ -91,11 +92,13 @@ header .column span {
   background: linear-gradient(#fff 96%, #eee 4%);
 }
 .piano-keyboard .white.active {
+  user-select: none;
   box-shadow: inset 5px 5px 20px rgba(0,0,0,0.4);
   background: linear-gradient(to bottom #fff 0%, #eee 100%);
 }
 .piano-keyboard .black {
   width: 44px;
+  user-select: none;
   z-index: 2;
   margin: 0 -22px 0 -22px;
   height: 140px;
@@ -104,6 +107,7 @@ header .column span {
   background: linear-gradient(#333, #111);
 }
 .piano-keyboard .black.active {
+  user-select: none;
   box-shadow: inset 5px 5px 20px rgba(0,0,0,0.9);
   background: linear-gradient(to bottom #fff 0%, #eee 100%);
 }
