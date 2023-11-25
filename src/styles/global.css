@@ -7,6 +7,7 @@ body {
   background-color: #e3f2fd;
   text-transform: capitalize;
   color: #dddddd;
+  overflow: hidden;
 }
 .container {
   padding: 2rem;
@@ -18,7 +19,7 @@ body {
 }
 .container.rotate{
   transform: rotate(0.25turn);
-  width: 95vh;
+  width: 100vh;
   margin: auto;
 }
 .container header {
