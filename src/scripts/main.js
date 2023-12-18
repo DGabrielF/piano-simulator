@@ -38,6 +38,7 @@ const playTune = (key) => {
 
     notes[key] = oscillator;
     notes[key].start();
+    gainNode.gain.value = Object.keys(notes).length > 1 ? 0.3 : 1;
   }
 };
 
@@ -46,6 +47,7 @@ const stopTune = (key) => {
     notes[key].stop();
     notes[key].disconnect();
     delete notes[key];
+    gainNode.gain.value = Object.keys(notes).length > 1 ? 0.3 : 1;
   }
 };
 
